@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LLM Q&A Web GUI</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>LLM Q&A Web GUI</h1>
+      <form method="post">
+        <label for="question">Enter your question</label>
+        <textarea id="question" name="question" rows="4">{{ question }}</textarea>
+        <button type="submit">Ask</button>
+      </form>
+
+      {% if result %}
+      <section class="result">
+        <h2>Processed Question</h2>
+        <p>{{ result.processed }}</p>
+
+        <h2>LLM Answer</h2>
+        <pre>{{ result.answer }}</pre>
+
+        <h3>Metadata</h3>
+        <ul>
+          <li><strong>Source:</strong> {{ result.source }}</li>
+          {% if result.errors %}
+          <li><strong>Errors:</strong>
+            <pre>{{ result.errors }}</pre>
+          </li>
+          {% endif %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if error %}
+      <section class="error">
+        <h2>Error</h2>
+        <pre>{{ error }}</pre>
+      </section>
+      {% endif %}
+    </div>
+  </body>
+</html>
