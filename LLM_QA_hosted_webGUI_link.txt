@@ -1,6 +1,4 @@
-Name: YOUR NAME HERE
-Matric number: YOUR MATRIC NUMBER
-Live URL: https://example.com/replace-with-your-deployed-url
-GitHub repo: https://github.com/yourusername/replace-with-repo
-
-Replace the placeholders above with your details and the live URL after deploying.
+Name: FEMI-BABATUNDE OLAMIDE BENJAMIN
+Matric number: 22CG031858
+Live URL: https://llm-qa-project-femi-babatunde-olami.vercel.app/
+GitHub repo: https://github.com/Minato2024/LLM_QA_Project_FEMI-BABATUNDE_OLAMIDE_22CG031858/
